@@ -60,4 +60,10 @@ public class TrainerRepositoryTest {
         assertEquals(misty.getTeam().size(), saved.getTeam().size());
     }
 
+    @Test
+    public void testDeleteTrainer(){
+
+    }
+
+
 }
