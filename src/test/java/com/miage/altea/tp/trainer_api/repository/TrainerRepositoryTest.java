@@ -6,6 +6,7 @@ import com.miage.altea.tp.trainer_api.bo.Trainer;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -19,6 +20,7 @@ import static org.junit.Assert.assertNotNull;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = TrainerApi.class, loader = AnnotationConfigContextLoader.class)
+@SpringBootTest
 public class TrainerRepositoryTest {
 
     @Autowired
@@ -59,11 +61,5 @@ public class TrainerRepositoryTest {
         assertEquals(misty.getName(), saved.getName());
         assertEquals(misty.getTeam().size(), saved.getTeam().size());
     }
-
-    @Test
-    public void testDeleteTrainer(){
-
-    }
-
 
 }
